@@ -1,0 +1,8 @@
+CREATE TABLE item (itemID INT UNIQUE, Name VARCHAR(30));
+INSERT INTO item(itemID, Name) VALUES (1, "Phone"), (2, "Laptop"), (3, "TV"), (4, "Book"), (5, "Bed"), (6, "Table");
+
+CREATE TABLE Deliveries (DeliveryID INT(11) AUTO_INCREMENT NOT NULL UNIQUE, Item VARCHAR(50) NOT NULL, Cost INT(11) DEFAULT 0, Method VARCHAR(30), Shipping INT(11) DEFAULT 10);
+
+URLS: 
+http://cgi.sice.indiana.edu/~feligarc/feligarc_A11_indiv.cgi
+http://cgi.sice.indiana.edu/~feligarc/delivery_table.cgi

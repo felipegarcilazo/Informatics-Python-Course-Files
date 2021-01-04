@@ -1,0 +1,19 @@
+CREATE TABLE Songs (SongID INT(11) NOT NULL UNIQUE AUTO_INCREMENT, 
+Song VARCHAR(50) NOT NULL, 
+Artist VARCHAR(50), 
+Price DECIMAL(10,2) NOT NULL);
+
+CREATE TABLE Purchased (PurchaseID INT(11) NOT NULL UNIQUE AUTO_INCREMENT, 
+Song INT(11) DEFAULT 1);
+
+INSERT INTO Songs (Song, Artist, Price) 
+VALUES ('Song 1', "Juice Wrld", 12.50), 
+("Song 2", "Snoop Dog", 15.00);
+
+select * from Songs;
+
+INSERT INTO Purchased(Song) VALUES (" + str(song) + ");"
+
+SELECT s.Song, COUNT(s.Song) FROM Purchased AS p, Songs AS s WHERE p.Song = s.SongID GROUP BY Song;s
+
+URL: http://cgi.soic.indiana.edu/~feligarc/RecordShop.cgi
